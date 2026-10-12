@@ -11,7 +11,16 @@ export function Projects() {
 
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {projects.map((project) => (
-            <article key={project.name} className="card flex flex-col">
+            <article
+              key={project.name}
+              className={`card flex flex-col${project.featured ? " lg:col-span-2" : ""}`}
+            >
+              {project.featured ? (
+                <p className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-accent-soft px-3 py-1 text-xs font-semibold text-accent">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
+                  Projeto principal
+                </p>
+              ) : null}
               <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <h3 className="text-xl font-bold tracking-tight text-ink">
@@ -45,6 +54,16 @@ export function Projects() {
                     className="text-accent transition hover:underline"
                   >
                     Ver site
+                  </a>
+                ) : null}
+                {project.storeUrl ? (
+                  <a
+                    href={project.storeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent transition hover:underline"
+                  >
+                    Ver na Play Store
                   </a>
                 ) : null}
                 {project.repo ? (
