@@ -9,10 +9,13 @@ export const skillCategories: SkillCategory[] = [
     items: [
       "Node.js",
       "TypeScript",
+      "JavaScript",
       "NestJS",
       "PHP",
       "Symfony",
       "Laravel",
+      "CakePHP",
+      "CodeIgniter",
       "APIs REST",
       "Microsserviços",
     ],
@@ -23,10 +26,22 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     title: "Cloud & DevOps",
-    items: ["GCP", "AWS", "Docker", "EC2", "S3"],
+    items: ["GCP", "Kubernetes", "AWS", "Docker", "EC2", "S3", "Grafana"],
+  },
+  {
+    title: "Arquitetura & Práticas",
+    items: [
+      "Arquitetura hexagonal",
+      "Chain of Responsibility",
+      "Strategy",
+      "Outbox",
+      "Observabilidade",
+      "SDD (spec-driven development)",
+      "Kanban",
+    ],
   },
   {
     title: "Ferramentas",
-    items: ["Git", "Linux", "WordPress", "Shell scripting"],
+    items: ["Git", "Linux", "WordPress", "Snyk", "Unleash", "Shell scripting"],
   },
 ];
